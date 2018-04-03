@@ -10,4 +10,28 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+# Ruby
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+
+# added by Miniconda3 installer
+export PATH="/Users/jibrankalia/miniconda3/bin:$PATH"
+
 # Customize to your needs...
+alias myls="/Users/jibrankalia/project_ls/ft_ls/ft_ls"
+alias ggls="/Users/jibrankalia/project_ls/giacols/ft_ls"
+
+eval $(thefuck --alias fix)
+
+# Exercism
+if [ -f ~/.config/exercism/exercism_completion.zsh ]; then
+  . ~/.config/exercism/exercism_completion.zsh
+fi
+
+# Git Extra Command
+export PATH="$HOME/git-extra-commands/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
